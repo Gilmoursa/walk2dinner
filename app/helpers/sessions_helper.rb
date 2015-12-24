@@ -5,9 +5,7 @@ module SessionsHelper
 
     def log_out
         session.delete(:user_id)
-        session.delete(:cart_id)
         session.clear
-        current_cart = nil
         current_user = nil
     end
 

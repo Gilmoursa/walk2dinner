@@ -1,13 +1,12 @@
-class DirectionsViewObject
-    attr_accessor :current_user, :item
+class MapViewObject
+    attr_accessor :current_user
 
-    def initialize(current_user, item)
+    def initialize(current_user)
         @current_user = current_user
-        @item = item
     end
 
     def directions_new_page
-        "http://maps.google.com/maps?saddr=#{current_user.address} #{current_user.city} #{current_user.state}&daddr=#{@item.business.user.address} #{@item.business.user.city} #{@item.business.user.state}&ie=UTF8&t=roadmap&iwloc=B"
+        "http://maps.google.com/maps?saddr=#{current_user.address} #{current_user.city} #{current_user.state}&daddr=#{current_user.restaurant.address} #{current_user.restaurant.city} #{current_user.restaurant.state}&ie=UTF8&t=roadmap&iwloc=B"
     end
 
     def directions

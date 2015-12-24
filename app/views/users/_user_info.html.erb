@@ -1,0 +1,75 @@
+<div class='col-xs-4'>
+    
+    <div class="table table-striped table-hover">
+        <%= form_for(@user, remote: true)  do |f| %>
+            <div class="row">
+                <div class='col-md-2'><i class='fa fa-institution'></i></div>
+            </div>
+
+            <div class="row">
+                <div class='col-md-2'>
+                    <i class='fa fa-envelope-o'></i>
+                </div>
+                <a href='mailto:<% @user.email %>'><%= @user.email %></a>
+            </div>
+
+            <div class="row">
+                <div class='col-md-2'>
+                    <i class='fa fa-building'></i>
+                </div>
+                <div id="address" class="read-version">
+                    <%= @user.address %>
+                </div>
+                <div class="edit-form">
+                    <%= f.text_field :address, required: true%><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class='col-md-2'>
+                    <i class='fa fa-building-o'></i>
+                </div>
+                <div id="city-state" class="read-version">
+                    <%= "#{@user.city}, #{@user.state}" %>
+                </div>
+                <div class="edit-form">
+                    <%= f.text_field :city, required: true%>,
+                    <%= f.text_field :state, required: true%>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class='col-md-2'>
+                    <i class='fa fa-map-o'></i>
+                </div>
+                <div id="zipcode" class="read-version">
+                    <%=@user.zip%>
+                </div>
+                <div class="edit-form">
+                    <%= f.text_field :zip, required: true%><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class='col-md-2'>
+                    <i class='fa fa-phone'></i>
+                </div>
+                <div id="phone" class="read-version">
+                    <%= @user.phone %>
+                </div>
+                <div class="edit-form">
+                    <%= f.telephone_field :phone, required: true%><br>
+                </div>
+            </div>
+
+            <% if profile_of_current_user?(@user) %>
+                <button type="submit" class="btn btn-default save-user-button">Save</button>
+            <% end %>
+
+        <% end %>
+
+        <% if profile_of_current_user?(@user) %>
+            <a href='#'  class="btn btn-default edit-user-button">Edit</a>
+        <% end %>
+    </div>
+</div>

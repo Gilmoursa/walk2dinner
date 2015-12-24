@@ -12,12 +12,12 @@
             </tr>
 
             <tr>
-                <td class='col-md-2'><i class='fa fa-home'></i></td>
-                <td><%= "#{@user.city}, #{@user.state}" %></a></td>
+                <td class='col-md-2'><i class='fa fa-building'></i></td>
+                <td><%= "#{@user.city.capitalize}, #{@user.state.upcase}" %></a></td>
             </tr>
 
             <tr>
-                <td class='col-md-2'><i class='fa fa-home'></i></td>
+                <td class='col-md-2'><i class='fa fa-institution'></i></td>
                 <td><%=@user.zip%></a></td>
             </tr>
 

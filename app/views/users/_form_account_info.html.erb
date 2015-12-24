@@ -1,4 +1,9 @@
 <div class="field form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, required: true%><br>
+</div>
+
+<div class="field form-group">
     <%= f.label :email %><br>
     <%= f.email_field :email, placeholder: "Email", required: true%><br>
 </div>

@@ -9,7 +9,7 @@
                               <%= link_to 'Home', root_url %>
                             </li>
                             <li>
-                              <%= link_to "#{current_user.name}'s Profile", user_path(current_user) %>
+                              <%= link_to "#{current_user.name.capitalize}'s Profile", user_path(current_user) %>
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">

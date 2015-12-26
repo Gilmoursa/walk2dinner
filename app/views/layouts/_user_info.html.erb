@@ -1,6 +1,10 @@
 <div class='col-xs-4'>
     <table class="table table-striped table-hover">
         <tbody>
+             <tr>
+                <td class='col-md-2'><i class='fa fa-envelope-o'></i></td>
+                <td><a href='mailto:<% @user.name %>'><%= @user.name %></a></td>
+            </tr>
             <tr>
                 <td class='col-md-2'><i class='fa fa-envelope-o'></i></td>
                 <td><a href='mailto:<% @user.email %>'><%= @user.email %></a></td>

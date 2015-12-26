@@ -22,13 +22,14 @@ function onEditUserAjaxSuccess(){
     $('form.edit_user').on('ajax:success', function(e, data, status, xhr ){
         $('.edit-form').hide();
         $('.read-version').show();
-        $('#address')[0].innerHTML = data.updates.address
-        $('#city-state')[0].innerHTML = data.updates.city+", "+data.updates.state
-        $('#phone')[0].innerHTML = data.updates.phone
-        $('#zipcode')[0].innerHTML = data.updates.zip
+        $('#email')[0].innerHTML = data.updates.email;
+        $('#address')[0].innerHTML = data.updates.address;
+        $('#city-state')[0].innerHTML = data.updates.city+", "+data.updates.state;
+        $('#phone')[0].innerHTML = data.updates.phone;
+        $('#zipcode')[0].innerHTML = data.updates.zip;
         $('.save-user-button').hide();
         $('.edit-user-button').show();
         var mapObject = $('iframe')[0];
-        mapObject.src = "https://maps.google.com/maps?hl=en&q="+data.updates.address+" "+data.updates.city+" "+data.updates.state+" "+"&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed"
+        mapObject.src = "https://maps.google.com/maps?hl=en&q="+data.updates.address+" "+data.updates.city+" "+data.updates.state+" "+"&ie=UTF8&t=roadmap&z=15&iwloc=B&output=embed";
     });
 }

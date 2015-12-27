@@ -27,6 +27,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'awesome_print'
 gem 'better_errors'
 gem 'figaro'
+gem 'annotate'
+gem 'pry'
+gem 'yelp', require: 'yelp'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

@@ -3,6 +3,8 @@ class TripsController < ApplicationController
 
     def new
         @trip = Trip.new
+        @restaurant = Restaurant.new
+        @weather = Weather.new
     end
 
     def create

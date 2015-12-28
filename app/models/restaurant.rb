@@ -36,7 +36,7 @@ class Restaurant < ActiveRecord::Base
         image_url = restaurant.first.image_url
         snippet = restaurant.first.snippet_text
         #create
-        Restaurant.create(name: name, location: location, phone: phone, food: food, url: url, postal: postal_code, rating:rating, image: image)
+        Restaurant.create(name: name, address: address, city: city, state: state, zip: zip, phone: phone, cuisine: cuisine, url: url, zip: zip, rating:rating, image_url: image_url, snippet: snippet)
       end
 
 end

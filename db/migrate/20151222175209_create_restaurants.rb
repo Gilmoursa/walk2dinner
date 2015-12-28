@@ -9,7 +9,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :phone
       t.string :cuisine
       t.string :image_url
-      t.string :rating_url
+      t.string :rating
       t.string :snippet
       
       t.timestamps null: false

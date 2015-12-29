@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :require_login, only: [:edit]
+    before_action :require_login, only: [:edit, :show]
 
     def new
         @user = User.new
@@ -18,10 +18,6 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find_by_id(params[:id])
-        if @user.nil?
-            flash[:notice] = "User was not found, please login or sign up."
-            redirect_to signup_path
-        end
     end
 
     def edit

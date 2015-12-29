@@ -1,0 +1,24 @@
+<h1>Here's your trip <%= @user.name.capitalize%>!</h1>
+<hr>
+<div class="row">
+    <div class='media'>
+        <div class='media-left'>
+            <img class = 'media-object' src="<%=@user.trip.restaurant.photo_url%>"/>
+        </div>
+        <div class='media-body'>
+            <h4 class="media-heading"><%= link_to "#{@user.trip.restaurant.name}", @user.trip.restaurant.url%></h4>
+            <hr>
+            <div>
+                <%= render '_restaurant_info', local:@user %>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='row'>
+    <div class='col-xs-5'>
+        <%= render '_trip_directions', local:@user %>
+    </div>
+    <div class='col-xs-5'>
+        <%= render '_trip_weather', local:@user %>
+    </div>
+</div>

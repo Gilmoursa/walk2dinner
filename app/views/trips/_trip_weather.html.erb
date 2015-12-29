@@ -1,0 +1,22 @@
+<table class="table table-striped table-hover">
+        <tbody>
+            <tr>
+                <td class='col-md-2'><i class='fa fa-tachometer'></i></td>
+                <td><%= @user.trip.weather.temp_min%> - <%= @user.trip.weather.temp_max%></td>
+            </tr>
+            <tr>
+                <td class='col-md-2'><i class='fa fa-newspaper-o'></i></td>
+                <td><%= @user.trip.weather.description %></td>
+            </tr>
+
+            <tr>
+                <td class='col-md-2'><i class='fa fa-cloud'></i></td>
+                <td><%= @user.trip.weather.rain_chance %>%</td>
+            </tr>
+
+            <tr>
+                <td class='col-md-2'><i class='fa fa-file-moon-o'></i></td>
+                <td><%= Time.at(@user.trip.weather.sunset).strftime("%l:%M %p")  %></td>
+            </tr>
+        </tbody>
+    </table>

@@ -19,7 +19,7 @@ class Weather < ActiveRecord::Base
     require 'open_weather'
     belongs_to :trip
 
-    def initialize(zip_code)
+    def retrieve_from_api(zip_code)
         options = { APPID: ENV['APPID'] }
         weather = OpenWeather::Current.zip("#{zip_code},US",options)
         #Temperature
@@ -40,9 +40,9 @@ class Weather < ActiveRecord::Base
         @wind_speed = weather['wind']['speed'].round
         #humidity
         @humidity = weather['main']['humidity']
-      end
+    end
 
-      def to_fahrenheit(temp)
+    def to_fahrenheit(temp)
         (temp*(9/5.0) - 459.67).round 
-      end
+    end
 end

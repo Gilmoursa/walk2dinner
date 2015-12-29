@@ -6,7 +6,7 @@
                     <i class='fa fa-institution'></i>
                 </div>
                 <div id="name" class="read-version">
-                    <%= @user.name %>
+                    <%= @user.name.capitalize %>
                 </div>
                 <div class="edit-form">
                     <%= f.text_field :name, required: true%><br>
@@ -30,7 +30,7 @@
                     <i class='fa fa-building'></i>
                 </div>
                 <div id="address" class="read-version">
-                    <%= @user.address %>
+                    <%= @user.address.capitalize %>
                 </div>
                 <div class="edit-form">
                     <%= f.text_field :address, required: true%><br>
@@ -42,7 +42,7 @@
                     <i class='fa fa-building-o'></i>
                 </div>
                 <div id="city-state" class="read-version">
-                    <%= "#{@user.city}, #{@user.state}" %>
+                    <%= "#{@user.city.capitalize}, #{@user.state.upcase}" %>
                 </div>
                 <div class="edit-form">
                     <%= f.text_field :city, required: true%>,

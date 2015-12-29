@@ -21,7 +21,7 @@
 class Restaurant < ActiveRecord::Base
     belongs_to :trip
 
-    def self.search(zip_code)
+    def initialize(zip_code)
         restaurant = Yelp.client.search(zip_code, {term: 'food'}).businesses.sample(1)
         name = restaurant.first.name
         #address
@@ -36,8 +36,6 @@ class Restaurant < ActiveRecord::Base
         rating = restaurant.first.rating
         image_url = restaurant.first.image_url
         snippet = restaurant.first.snippet_text
-        #create
-        Restaurant.create(name: name, address: address, city: city, state: state, zip: zip, phone: phone, cuisine: cuisine, url: url, rating:rating, image_url: image_url, snippet: snippet)
       end
 
 end

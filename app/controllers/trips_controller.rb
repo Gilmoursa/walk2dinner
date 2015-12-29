@@ -1,14 +1,10 @@
 class TripsController < ApplicationController
     before_action :require_login, only: [:edit]
 
-    def new
-        @trip = Trip.new
-        @restaurant = Restaurant.new
-        @weather = Weather.new
-    end
-
     def create
-        @trip = Trip.new(trip_params)
+        @trip = Trip.new
+        @trip.weather = Weather.new(user.zip)
+        @trip.restaurant = Restaurant.new(user.zip)
         if @trip.save
             log_in(@trip)
             redirect_to @trip

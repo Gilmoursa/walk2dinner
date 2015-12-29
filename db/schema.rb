@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(version: 20151222175218) do
     t.string   "phone"
     t.string   "cuisine"
     t.string   "image_url"
-    t.string   "rating_url"
+    t.string   "rating"
     t.string   "snippet"
+    t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

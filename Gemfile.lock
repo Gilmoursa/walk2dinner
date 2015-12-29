@@ -1,3 +1,10 @@
+GIT
+  remote: git@github.com:Gilmoursa/ruby_open_weather_map.git
+  revision: 1226664daf698eae7d4bae32636e9e163340b3f0
+  specs:
+    open-weather (0.12.0)
+      json (~> 1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -179,6 +186,7 @@ DEPENDENCIES
   figaro
   jbuilder (~> 2.0)
   jquery-rails
+  open-weather!
   pg
   pry
   rails (= 4.2.5)

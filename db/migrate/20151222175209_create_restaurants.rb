@@ -11,6 +11,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :image_url
       t.string :rating
       t.string :snippet
+      t.string :url
       
       t.timestamps null: false
     end

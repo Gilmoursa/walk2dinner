@@ -11,8 +11,9 @@
 #  phone      :string
 #  cuisine    :string
 #  image_url  :string
-#  rating_url :string
+#  rating     :string
 #  snippet    :string
+#  url        :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

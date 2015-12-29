@@ -3,16 +3,17 @@
 # Table name: restaurants
 #
 #  id         :integer          not null, primary key
-#  -name       :string
-#  -address    :string
-#  -city       :string
-#  -state      :string
-#  -zip        :string
-#  -phone      :string
-#  -cuisine    :string
-#  -image_url  :string
-#  -rating     :string
+#  name       :string
+#  address    :string
+#  city       :string
+#  state      :string
+#  zip        :string
+#  phone      :string
+#  cuisine    :string
+#  image_url  :string
+#  rating     :string
 #  snippet    :string
+#  url        :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -36,7 +37,7 @@ class Restaurant < ActiveRecord::Base
         image_url = restaurant.first.image_url
         snippet = restaurant.first.snippet_text
         #create
-        Restaurant.create(name: name, address: address, city: city, state: state, zip: zip, phone: phone, cuisine: cuisine, url: url, zip: zip, rating:rating, image_url: image_url, snippet: snippet)
+        Restaurant.create(name: name, address: address, city: city, state: state, zip: zip, phone: phone, cuisine: cuisine, url: url, rating:rating, image_url: image_url, snippet: snippet)
       end
 
 end

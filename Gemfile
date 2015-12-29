@@ -30,6 +30,7 @@ gem 'figaro'
 gem 'annotate'
 gem 'pry'
 gem 'yelp', require: 'yelp'
+gem 'open-weather', :git => "git@github.com:Gilmoursa/ruby_open_weather_map.git"
 # Use Unicorn as the app server
 # gem 'unicorn'
 

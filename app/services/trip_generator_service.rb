@@ -1,10 +1,7 @@
 class TripGeneratorService 
-    require 'pry'
     def self.call(user)
-        trip = Trip.new
-        binding.pry
-        trip.weather.retrieve_from_api(user.zip)
-        trip.restaurant.retrieve_from_api(user.zip)
-        trip
+        weather = Weather.retrieve_from_api(user.zip)
+        restaurant = Restaurant.retrieve_from_api(user.zip)
+        trip = Trip.create(weather_id: weather.id, restaurant_id: restaurant.id)
     end
 end

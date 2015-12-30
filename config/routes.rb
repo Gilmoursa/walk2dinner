@@ -45,9 +45,7 @@
 Rails.application.routes.draw do
   #resources
   resources :users
-  resources :trips
-  resources :weathers
-  resources :restaurants
+  resources :trips, only: [:show]
   #welcome
   root to: 'welcome#index'
   #login

@@ -2,22 +2,22 @@
 <table class="table table-striped table-hover">
     <tbody>
         <tr>
-            <td class='col-md-2'><i class='fa fa-tachometer'></i></td>
-            <td class='col-md-2'><%= @weather.temp_min%> - <%= @weather.temp_max%> °F</td>
+            <td class='col-xs-2'><i class='fa fa-tachometer'></i></td>
+            <td class='col-mxs-2'><%= @weather.temp_min%> - <%= @weather.temp_max%> °F</td>
         </tr>
         <tr>
             <td class='col-md-2'><i class='fa fa-newspaper-o'></i></td>
-            <td><%= @weather.description %></td>
+            <td class='col-mxs-2'><%= @weather.description %></td>
         </tr>
 
         <tr>
             <td class='col-md-2'><i class='fa fa-cloud'></i></td>
-            <td><%= @weather.rain_chance %>%</td>
+            <td class='col-mxs-2'><%= @weather.rain_chance %>%</td>
         </tr>
 
         <tr>
-            <td class='col-md-2'><i class='fa fa-file-moon-o'></i></td>
-            <td><%= Time.at(@weather.sunset).strftime("%l:%M %p")  %></td>
+            <td class='col-md-2'><i class='fa fa-moon-o'></i></td>
+            <td class='col-mxs-2'><%= Time.at(@weather.sunset).strftime("%l:%M %p")  %></td>
         </tr>
     </tbody>
 </table>

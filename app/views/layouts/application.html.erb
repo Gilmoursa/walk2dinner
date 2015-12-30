@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Walk2dinner</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-    <%= render "layouts/header" %>
-    <%= render '/layouts/flashmessages' %>
-    <div class="container">
-        <%= yield %>
-    </div>
-</body>
+  <head>
+    <title>Walk2dinner</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+      <%= render "layouts/header" %>
+      <%= render '/layouts/flashmessages' %>
+      <div class="container">
+          <%= yield %>
+      </div>
+  </body>
 </html>

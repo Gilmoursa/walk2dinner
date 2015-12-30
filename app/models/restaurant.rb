@@ -28,7 +28,7 @@ class Restaurant < ActiveRecord::Base
         city = restaurant.first.location.city
         state = restaurant.first.location.state_code
         zip = restaurant.first.location.postal_code
-        phone = restaurant.first.phone
+        phone = restaurant.first.phone.insert(3,'-').insert(7,'-')
         #more restaurant info
         cuisine = restaurant.first.categories.flatten.first
         url = restaurant.first.url

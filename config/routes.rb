@@ -56,5 +56,5 @@ Rails.application.routes.draw do
   #signup
   get '/signup', to: 'users#new', as: "signup"
   #create dinner trip
-  post '/trips', to: 'trips#create', as: 'create_trips'
+  post '/users/:id/trips', to: 'trips#create', as: 'create_trips'
 end

@@ -27,8 +27,7 @@ class UsersController < ApplicationController
     def update
         @user = User.find_by_id(params[:id])
         @user.update_attributes(user_params)
-        updated_data = user_params.as_json
-        render json: {updates: updated_data}
+        render json: {updates: user_params.as_json}
     end
 
     private

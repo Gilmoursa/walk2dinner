@@ -6,7 +6,7 @@ class TripsController < ApplicationController
         @trip = TripGeneratorService.call(@user)
 
         if @trip.save
-            redirect_to trip_path
+            redirect_to trip_path(@trip.id)
         else
             flash[:alert] = "Sorry, your trip could not be created."
             redirect_to @user
@@ -14,7 +14,6 @@ class TripsController < ApplicationController
     end
 
     def show
-        raise
         @trip = Trip.find_by_id(params[:id])
         @restaurant = Restaurant.find_by_id(@trip.restaurant_id)
         @weather = Weather.find_by_id(@trip.weather_id)

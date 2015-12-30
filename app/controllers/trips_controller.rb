@@ -5,9 +5,6 @@ class TripsController < ApplicationController
         @user = current_user
         @trip = TripGeneratorService.call(@user)
 
-        # @trip = Trip.new
-        # @trip.weather = Weather.new(user.zip)
-        # @trip.restaurant = Restaurant.new(user.zip)
         if @trip.save
             redirect_to trip_path
         else
@@ -17,6 +14,7 @@ class TripsController < ApplicationController
     end
 
     def show
+        raise
         @trip = Trip.find_by_id(params[:id])
         @restaurant = Restaurant.find_by_id(@trip.restaurant_id)
         @weather = Weather.find_by_id(@trip.weather_id)

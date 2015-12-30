@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/gilmoursa/Development/projects/ruby_open_weather_map
+GIT
+  remote: git://github.com/Gilmoursa/ruby_open_weather_map.git
+  revision: 7eacf8a75f85e2eb403e838e9ff6a41c6a8e20ad
   specs:
     open-weather (0.12.0)
       json (~> 1)
@@ -42,8 +43,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    annotate (2.6.10)
-      activerecord (>= 3.2, <= 4.3)
+    annotate (2.7.0)
+      activerecord (>= 3.2, < 6.0)
       rake (~> 10.4)
     arel (6.0.3)
     awesome_print (1.6.1)

@@ -8,7 +8,7 @@
 #  description :string
 #  icon        :string
 #  rain_chance :integer
-#  sunset      :time
+#  sunset      :integer
 #  wind_speed  :integer
 #  humidity    :integer
 #  created_at  :datetime         not null

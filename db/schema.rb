@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 20151222175218) do
     t.string   "description"
     t.string   "icon"
     t.integer  "rain_chance"
-    t.time     "sunset"
+    t.integer  "sunset"
     t.integer  "wind_speed"
     t.integer  "humidity"
     t.datetime "created_at",  null: false

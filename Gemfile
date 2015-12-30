@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem 'rails_12factor', group: :production
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -30,7 +30,8 @@ gem 'figaro'
 gem 'annotate'
 gem 'pry'
 gem 'yelp', require: 'yelp'
-gem 'open-weather', :git => "git@github.com:Gilmoursa/ruby_open_weather_map.git"
+gem 'open-weather', :path => "/Users/gilmoursa/Development/projects/ruby_open_weather_map"
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

@@ -11,7 +11,7 @@ class MapViewObject
     end
 
     def directions
-       directions_new_page + "&output=embed"
+       directions_new_page + "&output=embed&dirflg=w"
     end
 
     def user_location

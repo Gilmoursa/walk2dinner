@@ -2,17 +2,18 @@
 <hr>
 <div class="row">
     <div class="column-xs-7">
-        <%= render '/layouts/map', local:@user %>
+      <%= render '/layouts/map', local:@user %>
+    
+      <h3>           Account Information</h3>
+      <hr>
+      <div class="column-xs-5">
+          <%= render 'user_info', local:@user %>
+        <div>
+             <%= form_tag create_trips_path do %>
+              <%= hidden_field_tag(user: @user) %>
+              <%= submit_tag 'Plan a Dinner Trip', class: 'btn btn-default' %>
+             <% end %>
+        </div>
+        </div>
     </div>
-    <h3>Account Information</h3>
-    <hr>
-    <div class="column-xs-5">
-        <%= render 'user_info', local:@user %>
-    </div>
-</div>
-<div>
-     <%= form_tag create_trips_path do %>
-      <%= hidden_field_tag(user: @user) %>
-      <%= submit_tag 'Plan a Dinner Trip', class: 'btn btn-default' %>
-     <% end %>
 </div>
